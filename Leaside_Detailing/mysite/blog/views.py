@@ -1,6 +1,6 @@
-from django.shortcuts import render
-
-
+from django.shortcuts import render, redirect
+from .forms import UserForm
+from .models import Contact
 # Extra Imports for the Login and Logout Capabilities
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
@@ -26,16 +26,28 @@ def about(request):
     return render(request,'blog/about.html')
 
 def contact(request):
-    return render(request,'blog/contact.html')
+    return render(request, template_name="blog:contact",
+                            context={"Contact": Contact.objects.all})
 
 def events(request):
     return render(request,'blog/events.html')
 
 def register(request):
+    if request.method == "POST":
+        form = UserForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            user.save()
+            registered = True
+            login(request, user)
+            return redirect("blog:index")
+        else:
+            for msg in form.error_messages:
+                print(form.error_messages[msg])
 
-    # This is the render and context dictionary to feed
-    # back to the registration.html file page.
-    return render(request,'blog/register.html')
+    form = UserForm
+    return render(request,'blog/register.html',
+                            context={"form":form})
 
 
 
