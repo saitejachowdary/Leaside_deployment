@@ -1,0 +1,283 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="zxx">
+
+<head>
+    <title>Leaside Detailing</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Full Car Detailing, Interior Detailing, exterior Washing, Enginne Cleaning, Rust Protecting, Under Rust Protecting, Salt Eleminating, Degreasing" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+    </script>
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="{% static "css/style.css" %}" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="{% static "css/font-awesome.css" %}" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700" rel="stylesheet">
+    <!-- //Fonts -->
+</head>
+
+<body>
+    <!-- //header -->
+    <header class="py-sm-3 pt-3 pb-2" id="home">
+        <div class="container">
+            <!-- nav -->
+            <div class="top d-md-flex">
+                <div id="logo">
+                    <h1> <a href="{% url 'blog:index' %}"><span class=""></span>Leaside Detailing</a></h1>
+                </div>
+                <div class="search-form mx-md-auto">
+                    <div class="form-w3layouts-grid">
+                        <form action="#" method="post" class="newsletter">
+                            <input class="search" type="search" placeholder="Search..." required="">
+                            <button class="form-control btn" value=""><span class="fa fa-search"></span></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="forms mt-md-0 mt-2">
+                    <a href="{% url 'blog:user_login' %}" class="btn"><span class="fa fa-user-circle-o"></span> Sign In</a>
+                    <a href="{% url 'blog:register' %}" class="btn"><span class="fa fa-pencil-square-o"></span> Sign Up</a>
+                </div>
+            </div>
+            <nav class="text-center">
+                <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+                <input type="checkbox" id="drop" />
+                <ul class="menu">
+                    <li><a href="{% url 'blog:events' %}">Home</a></li>
+                    <li><a href="{% url 'blog:about' %}">About Us</a></li>
+                    <li>
+                        <!-- First Tier Drop Down -->
+                        <label for="drop-2" class="toggle">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span>
+                        </label>
+                        <a href="#">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                        <input type="checkbox" id="drop-2" />
+                        <ul>
+                            <li><a href="{% url 'blog:services' %}" class="drop-text">Services</a></li>
+                            <li><a href="{% url 'admin:index' %}" class="drop-text">Admin</a></li>
+                            <li><a href="{% url 'blog:index' %}" class="drop-text">Reviews</a></li>
+                            <li><a href="{% url 'blog:single' %}" class="drop-text">More Info</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li><a href="{% url 'blog:events' %}">Events</a></li>
+                    <li><a href="{% url 'blog:contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- //nav -->
+        </div>
+    </header>
+    <!-- //header -->
+    <div class="main-content inner" style= "background: url({% static 'blog/images/banner1.jpg' %}) no-repeat; background-size: 100%;">
+        <div class="overlay inner">
+
+        </div>
+    </div>
+    <!--// banner -->
+    <!-- banner-bottom -->
+    <section class="contact-main py-5">
+        <div class="container py-md-5">
+            <h3 class="title-w3pvt text-center">Signin Now</h3>
+
+            <div class="login px-sm-4 mx-auto mw-100 login-wrapper">
+                <form class="login-wrapper w3pvt_mail_grid_right" action="#" method="post">
+                  {% csrf_token %}
+                    <div class="form-group">
+                        <label class="mb-2">Email Address</label>
+                        <input type="email" class="form-control" name= "username" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required="">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-2">Password</label>
+                        <input type="password" class="form-control" name= "password" id="exampleInputPassword1" placeholder="" required="">
+                    </div>
+                    <button type="submit" value="Login" class="btn btn-primary submit mt-2 read-more">Sign In</button>
+                    <p class="text-center mt-4">
+                        <a href="{% url 'blog:register' %}"> Don't have an Account?</a>
+                    </p>
+                </form>
+            </div>
+
+
+
+
+        </div>
+    </section>
+    <!-- //banner-bottom -->
+    <!--/help-line -->
+    <section class="help-line-w3layouts py-5">
+        <div class="container">
+            <div class="row help-line-grid">
+                <div class="col-sm-6">
+                    <h3>Contact Us</h3>
+                    <p>Call us, we are 24/7 Helpline</p>
+                </div>
+                <div class="col-sm-6 text-sm-right mt-sm-0 mt-3">
+                    <h3><span class="fa fa-phone" aria-hidden="true"></span> +1 6475540465</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//help-line -->
+    <!-- footer -->
+    <footer class="footer-content py-5">
+        <div class="container-fluid py-lg-5 inner-sec-w3ls">
+            <div class="row">
+                <div class="col-lg-4 footer-top mt-md-0 mt-sm-5 pr-lg-5">
+                    <h2>
+                        <a class="navbar-brand" href="index.html">
+                            <span class=""></span>Leaside Detailing</a>
+                    </h2>
+                    <p class="my-3">We give 1 year warranty for new cars.</p>
+
+                </div>
+                <div class="col-lg-3 mt-md-0 mt-5">
+                    <div class="footer-w3pvt">
+                        <h3 class="mb-3 w3pvt_title">Navigation</h3>
+                        <hr>
+                        <div class="row">
+                            <ul class="col-6 list-info-w3pvt links">
+
+                                <li>
+                                    <a href="{% url 'blog:events' %}">
+                                        Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog:about' %}">
+                                        About Us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog:events' %}">
+                                        Events
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog:services' %}">
+                                        Services
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog:contact' %}">
+                                        Contact Us
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <ul class="col-6 list-info-w3pvt links">
+                                <li>
+                                    <a href="{% url 'blog:about' %}">
+                                        Our Mission
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog:events' %}">
+                                        Latest Posts
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Explore
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog:contact' %}">
+                                        Find us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog:events' %}">
+                                        Privacy Policy
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-2 mt-lg-0 mt-5">
+                    <div class="footer-w3pvt">
+                        <h3 class="mb-3 w3pvt_title">Contact Us</h3>
+                        <hr>
+                        <div class="last-w3layouts-contact">
+                            <p>
+                                <a href="mailto:example@email.com">zahidbutt@gmail.com</a>
+                            </p>
+                        </div>
+                        <div class="last-w3layouts-contact my-2">
+                            <p>+1 6475540465</p>
+                        </div>
+                        <div class="last-w3layouts-contact">
+                            <p>125 Laird Drive
+                                <br>East York,Toronto</p>
+                        </div>
+                    </div>
+                </div>
+                   <div class="col-lg-3 mt-lg-0 mt-5">
+                    <div class="footer-w3pvt">
+                        <h3 class="mb-3 w3pvt_title">Stay up to date</h3>
+                        <hr>
+                        <div class="footer-text">
+                            <p>By subscribing to our mailing list you will always get latest news and updates from us.</p>
+                            <form action="#" method="post">
+                                <input type="email" name="Email" placeholder="Enter your email..." required="">
+                                <button class="btn1 btn"><span class="fa fa-paper-plane-o" aria-hidden="true"></span></button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- //footer -->
+    <div class="copy-right py-2">
+        <div class="container-fluid inner-sec-w3ls">
+            <div class="row">
+                <div class="col-lg-6 copy-w3pvt">
+                    <p class="copy-right-grids text-li text-left my-sm-4 my-4">© 2019 Yoga Lite. All Rights Reserved | Design by
+                        <a href="http://w3layouts.com/"></a>
+                    </p>
+                </div>
+                <div class="col-lg-5 w3layouts-footer text-right">
+                    <ul class="social_section_1info">
+                        <li class="mb-2 facebook"><a href="#"><span class="fa fa-facebook"></span> facebook</a></li>
+                        <li class="mb-2 twitter"><a href="#"><span class="fa fa-twitter"></span> twitter</a></li>
+                        <li class="google"><a href="#"><span class="fa fa-google-plus"></span> google</a></li>
+                        <li class="linkedin"><a href="#"><span class="fa fa-linkedin"></span> linkedin</a></li>
+                    </ul>
+                </div>
+                <div class="move-top col-1"><a href="#home" class="move-top"> <span class="fa fa-angle-up" aria-hidden="true"></span></a></div>
+            </div>
+            <!-- //footer bottom -->
+        </div>
+    </div>
+
+</body>
+
+</html>

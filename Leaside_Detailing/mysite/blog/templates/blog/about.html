@@ -1,0 +1,518 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="zxx">
+
+<head>
+    <title>Leaside Detailing</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Full Car Detailing, Interior Detailing, exterior Washing, Enginne Cleaning, Rust Protecting, Under Rust Protecting, Salt Eleminating, Degreasing" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+    </script>
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="{% static "css/style.css" %}" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="{% static "css/font-awesome.css" %}" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700" rel="stylesheet">
+    <!-- //Fonts -->
+</head>
+
+<body>
+    <!-- //header -->
+    <header class="py-sm-3 pt-3 pb-2" id="home">
+        <div class="container">
+            <!-- nav -->
+            <div class="top d-md-flex">
+                <div id="logo">
+                    <h1> <a href="{% url 'blog:index' %}"><span class=""></span>Leaside Detailing</a></h1>
+                </div>
+                <div class="search-form mx-md-auto">
+                    <div class="form-w3layouts-grid">
+                        <form action="#" method="post" class="newsletter">
+                            <input class="search" type="search" placeholder="Search..." required="">
+                            <button class="form-control btn" value=""><span class="fa fa-search"></span></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="forms mt-md-0 mt-2">
+                    <a href="{% url 'blog:user_login' %}" class="btn"><span class="fa fa-user-circle-o"></span> Sign In</a>
+                    <a href="{% url 'blog:register' %}" class="btn"><span class="fa fa-pencil-square-o"></span> Sign Up</a>
+                </div>
+            </div>
+            <nav class="text-center">
+                <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+                <input type="checkbox" id="drop" />
+                <ul class="menu">
+                    <li><a href="{% url 'blog:events' %}">Home</a></li>
+                    <li class="active"><a href="{% url 'blog:about' %}">About Us</a></li>
+                    <li>
+                        <!-- First Tier Drop Down -->
+                        <label for="drop-2" class="toggle">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span>
+                        </label>
+                        <a href="#">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                        <input type="checkbox" id="drop-2" />
+                        <ul>
+                            <li><a href="{% url 'blog:services' %}" class="drop-text">Services</a></li>
+                            <li><a href="{% url 'admin:index' %}" class="drop-text">Admin</a></li>
+                            <li><a href="#test" class="drop-text">Reviews</a></li>
+                            <li><a href="{% url 'blog:single' %}" class="drop-text">More Info</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li><a href="{% url 'blog:events' %}">Events</a></li>
+                    <li><a href="{% url 'blog:contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- //nav -->
+        </div>
+    </header>
+    <!-- //header -->
+    <div class="main-content inner" style= "background: url({% static 'blog/images/banner1.jpg' %}) no-repeat; background-size: 100%;">
+        <div class="overlay inner">
+
+        </div>
+    </div>
+    <!--// banner -->
+    <!-- //about -->
+    <section class="banner-bottom py-5" >
+        <div class="container py-md-5">
+            <div class="row banner-grids mb-lg-5">
+
+
+                <div class="col-lg-7 content-right">
+                    <h3 class="title-w3pvt">About of Leaside Detaling</h3>
+                    <h4>We will help to find better treatment for your vehicle.</h4>
+                    <p class="mt-2 text-left">We are one of the company whichproviding best custumer services in toronto from last 15+ years</p>
+                    <p class="mt-2 text-left">Checking the whole condition of the vehicle and giving better treatment is our speciality</p>
+                    <div class="row stats text-left mt-5">
+                        <div class="col-lg-4 counter">
+                            <span class="fa fa-users"></span>
+                            <div class="counter-info">
+                                <h5>900+</h5>
+                                <p>Cars done in 2018</p>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 counter two">
+                            <span class="fa fa-user-md"></span>
+                            <div class="counter-info">
+                                <h5>30+</h5>
+                                <p>services</p>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 counter">
+                            <span class="fa fa-diamond"></span>
+                            <div class="counter-info">
+                                <h5>15+</h5>
+                                <p>Experience</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 content-left">
+                    <img src="{% static "images/ab.jpg" %}" alt="" class="img-fluid">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- /about -->
+
+
+    <!-- /last-content -->
+    <section class="last-content py-5" style= "background: url({% static 'blog/images/banner3.jpg' %}) no-repeat; background-size: 100%;">
+
+        <div class="container text-center py-md-5">
+            <div class="last-w3pvt-inner-content row">
+
+                <div class="col-md-6">
+
+                    <form action="#" class="booking" method="post">
+                      {% csrf_token %}
+                        <h3 class="mb-4">Make a Appointment</h3>
+                        <div class="form-group">
+                            <input placeholder="Your Name" name="name" type="text" required="">
+                            <input placeholder="Contact Number" name="number" type="text" required="">
+                            <input placeholder="Address" type="text" required="">
+                            <input placeholder="Timing" type="text" required="">
+                            <button class="book-appo btn mt-3">Quick Appointment </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //last-content -->
+    <!-- banner-bottom -->
+    <section class="events py-5">
+        <div class="container py-md-5">
+            <h3 class="title-w3pvt text-center">Our Services</h3>
+
+            <div class="row ab-info second mt-lg-4 text-center">
+                <div class="col-lg-4 ab-content">
+                    <div class="ab-content-inner">
+                        <div class="w3layouts-icon mx-auto">
+                            <span class="fa fa-object-ungroup" aria-hidden="true"></span>
+                        </div>
+                        <div class="ab-info-con">
+                            <h4>Desalting</h4>
+                            <p>Applying salt eleminating chemicals to the body of the car, then wash it with power washer protects your car from Heavy Rust</p>
+                            <a href="{% url 'blog:single' %}" class="read-more two btn m-0 px-3"><span class="fa fa-long-arrow-right"> </span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 ab-content">
+                    <div class="ab-content-inner">
+                        <div class="w3layouts-icon mx-auto">
+                            <span class="fa fa-xing" aria-hidden="true"></span>
+                        </div>
+                        <div class="ab-info-con">
+                            <h4>Detailing</h4>
+                            <p>Checking the whole condition of the vehicle and giving better treatment which is required for the vehicle.</p>
+                            <a href="{% url 'blog:single' %}" class="read-more two btn m-0 px-3"><span class="fa fa-long-arrow-right"> </span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 ab-content">
+                    <div class="ab-content-inner">
+                        <div class="w3layouts-icon mx-auto">
+                            <span class="fa fa-handshake-o" aria-hidden="true"></span>
+                        </div>
+                        <div class="ab-info-con">
+                            <h4>Degreasing</h4>
+                            <p>We apply chemichals to remove the grease marks on the car and giving better treatment is our speciality</p>
+                            <a href="{% url 'blog:single' %}" class="read-more two btn m-0 px-3"><span class="fa fa-long-arrow-right"> </span></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- //banner-bottom -->
+    <!-- /team-content -->
+    <section class="services py-5" id="team">
+        <div class="container py-md-5">
+            <h3 class="title-w3pvt text-center mb-5">Our Team</h3>
+            <div class="row team-grids text-left mt-md-5 mt-4">
+                <div class="col-lg-4 team-main">
+
+                    <div class="team-img"><img src="{% static "blog/images/t1.jpg" %}" alt="news image" class="img-fluid"> </div>
+                    <div class="team-info">
+
+                        <h4>Zahid butt</h4>
+                        <small>Owner</small>
+                        <p>Is Proffessional in Detaling service and Rust protection for past 20 years. Have a good Knowledge on dealing with different aspects of vehicle problems. p</p>
+
+                    </div>
+
+
+                </div>
+
+                <div class="col-lg-4 team-main">
+                    <div class="team-info">
+
+                        <h4>
+                            cassidy jonnathan
+                        </h4>
+                        <small>Team Member</small>
+                        <p>Working from long time in this place, and providing services for more than four years in this place.</p>
+
+                    </div>
+
+                    <div class="team-img"><img src="{% static "blog/images/t2.jpg" %}" alt="news image" class="img-fluid"> </div>
+
+
+                </div>
+
+                <div class="col-lg-4 team-main">
+
+                    <div class="team-img"><img src="{% static "blog/images/t3.jpg" %}" alt="news image" class="img-fluid"> </div>
+                    <div class="team-info">
+
+                        <h4>Pery mathyus</h4>
+                        <small>Proffessional</small>
+                        <p>Working in Detailing field for past 10 years and providing services to the customers.</p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- //team-content -->
+    <!--/testimonials -->
+    <section class="testimonials py-5" id="testimonials" style= "background: url({% static 'blog/images/banner2.jpg' %}) no-repeat; background-size: 100%;">
+        <div class="container py-md-5">
+            <div class="header text-center">
+                <h3 class="title-w3pvt two mb-lg-5 mb-4"> Client Reviews<span>.</span></h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 test-info text-left">
+                    <p><span class="fa fa-quote-left"></span>Its my first time visiting this place and received an expected service from the Krown Team.<span class="fa fa-quote-right"></span></p>
+                    <div class="test-img text-right mb-3">
+                        <img src="{% static "blog/images/te2.jpg" %}" class="img-fluid" alt="user-image">
+                    </div>
+                    <h3 class="my-md-2 my-3 text-right">Erwin</h3>
+
+                    <ul class="list-unstyled w3layouts-icons clients text-right">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-star"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-star"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-star"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-star-half-o"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 test-info text-left">
+                    <p><span class="fa fa-quote-left"></span> I'm a regular customer for this place from past 4 years and receiving good service from the Owner. <span class="fa fa-quote-right"></span></p>
+
+                    <div class="test-img text-right mb-3">
+                        <img src="{% static "blog/images/te3.jpg" %}" class="img-fluid" alt="user-image">
+                    </div>
+                    <h3 class="my-md-2 my-3 text-right"> Rayan</h3>
+
+                    <ul class="list-unstyled w3layouts-icons clients text-right">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-star"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-star"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-star"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-star-half-o"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 test-info text-left">
+                    <p><span class="fa fa-quote-left"></span> Best Detailing Shop in Toronto, The workers are very nice.<span class="fa fa-quote-right"></span></p>
+
+                    <div class="test-img text-right mb-3">
+                        <img src="{% static "blog/images/te1.jpg" %}" class="img-fluid" alt="user-image">
+                    </div>
+                    <h3 class="my-md-2 my-3 text-right">Jenifer Burns</h3>
+
+                    <ul class="list-unstyled w3layouts-icons clients text-right">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-star"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-star"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-star"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-star-half-o"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//testimonials -->
+    <!-- footer -->
+    <footer class="footer-content py-5">
+        <div class="container-fluid py-lg-5 inner-sec-w3ls">
+            <div class="row">
+                <div class="col-lg-4 footer-top mt-md-0 mt-sm-5 pr-lg-5">
+                    <h2>
+                        <a class="navbar-brand" href="{% url 'blog:index' %}">
+                            <span class=""></span>Leaside Detailing</a>
+                    </h2>
+                    <p class="my-3">Checking the whole condition of the vehicle and giving better treatment is our speciality</p>
+
+                </div>
+                <div class="col-lg-3 mt-md-0 mt-5">
+                    <div class="footer-w3pvt">
+                        <h3 class="mb-3 w3pvt_title">Navigation</h3>
+                        <hr>
+                        <div class="row">
+                            <ul class="col-6 list-info-w3pvt links">
+
+                                <li>
+                                    <a href="{% url 'blog:events' %}">
+                                        Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog:about' %}">
+                                        About Us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog:events' %}">
+                                        Events
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog:services' %}">
+                                        Services
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog:contact' %}">
+                                        Contact Us
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <ul class="col-6 list-info-w3pvt links">
+                                <li>
+                                    <a href="{% url 'blog:about' %}">
+                                        Our Mission
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog:events' %}">
+                                        Latest Posts
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Explore
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog:contact' %}">
+                                        Find us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog:events' %}">
+                                        Privacy Policy
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-2 mt-lg-0 mt-5">
+                    <div class="footer-w3pvt">
+                        <h3 class="mb-3 w3pvt_title">Contact Us</h3>
+                        <hr>
+                        <div class="last-w3layouts-contact">
+                            <p>
+                                <a href="mailto:example@email.com">zahidbutt@gmail.com</a>
+                            </p>
+                        </div>
+                        <div class="last-w3layouts-contact my-2">
+                            <p>+1 6475540465</p>
+                        </div>
+                        <div class="last-w3layouts-contact">
+                            <p>125 Laird Drive
+                                <br>East York,Toronto</p>
+                        </div>
+                    </div>
+                </div>
+                  <div class="col-lg-3 mt-lg-0 mt-5">
+                    <div class="footer-w3pvt">
+                        <h3 class="mb-3 w3pvt_title">Stay up to date</h3>
+                        <hr>
+                        <div class="footer-text">
+                            <p>By subscribing to our mailing list you will always get latest news and updates from us.</p>
+                            <form action="#" method="post">
+                                <input type="email" name="Email" placeholder="Enter your email..." required="">
+                                <button class="btn1 btn"><span class="fa fa-paper-plane-o" aria-hidden="true"></span></button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- //footer -->
+    <div class="copy-right py-2">
+        <div class="container-fluid inner-sec-w3ls">
+            <div class="row">
+                <div class="col-lg-6 copy-w3pvt">
+                    <p class="copy-right-grids text-li text-left my-sm-4 my-4">Leaside Deatailing
+                        <a href="http://w3layouts.com/"></a>
+                    </p>
+                </div>
+                <div class="col-lg-5 w3layouts-footer text-right">
+                    <ul class="social_section_1info">
+                        <li class="mb-2 facebook"><a href="#"><span class="fa fa-facebook"></span> facebook</a></li>
+                        <li class="mb-2 twitter"><a href="#"><span class="fa fa-twitter"></span> twitter</a></li>
+                        <li class="google"><a href="#"><span class="fa fa-google-plus"></span> google</a></li>
+                        <li class="linkedin"><a href="#"><span class="fa fa-linkedin"></span> linkedin</a></li>
+                    </ul>
+                </div>
+                <div class="move-top col-1"><a href="#home" class="move-top"> <span class="fa fa-angle-up" aria-hidden="true"></span></a></div>
+            </div>
+            <!-- //footer bottom -->
+        </div>
+    </div>
+
+</body>
+
+</html>
